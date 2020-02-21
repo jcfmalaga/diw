@@ -1,0 +1,593 @@
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Roboto'), local('Roboto-Regular'), url('../fonts/KFOmCnqEu92Fr1Mu7GxKOzY.woff2') format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Roboto'), local('Roboto-Regular'), url('../fonts/KFOmCnqEu92Fr1Mu4mxK.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+/* Reseteamos los estilos del navegador */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Estilos generales para toda la web */
+body{
+    width: 80%;
+    margin: 20px auto;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: .9rem;
+
+}
+
+p {
+    color: #555555;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+h3, h2, h1 {
+    text-align: center;
+    color: #be5813;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+/* Tamaño del contenedor dejando 10% a los lados */
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.section_index {
+    width: 70%;
+}
+
+.article_index {
+    width: 30%;
+}
+
+/* Estilos de la cabecera */
+header  {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Tamaño del logo */
+.logo {
+    width: 10vw;
+    height: 10vh;
+}
+
+/* Tamaño de las imagenes de idiomas */
+.idiomas {
+    width: 2vw;
+    height: 3vh;
+}
+
+/* Estilos de la barra de navegación */
+/* Estilos comunes de la barra de navegación */
+nav {
+    color: #FFFFFF;
+    background-color: #3a1a14;
+    font-size: 1rem;
+    padding: 5px;
+    width: 100%;
+}
+
+/* Estilos par el primer nivel usando position relative y absolute
+para que o se salgan de su padre */
+
+nav li {
+    line-height: 2rem;
+    position: relative;
+}
+
+nav li ul {
+    position: absolute;
+}
+
+/* Quitamos los estilos como el punto de las ul */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Damos estilos a las etiquetas a y quitamos los etilos com el subrayado */
+nav a {
+    color: #ddd;
+    display: block;
+    padding: 0 2.5em;
+    text-decoration: none;
+    transition: .4s;
+}
+
+/* Cambiamos el color al pasar por encima de un enlace */
+nav a:hover{
+    background-color: #48251e;
+    color: #faba8f;
+}
+
+nav>ul {
+    background-color: #3a1a14;
+    display: table;
+    width: 100%;
+}
+
+/* ancho y posicionamiento para el siguiente nivel */
+nav>ul>li{
+    width: 250px;
+    float: left;
+}
+nav li ul {
+    display: none;
+}
+
+nav li:hover > ul{
+    display: block;
+}
+
+nav li li {
+    width: 100%;
+    background-color:#3a1a14;
+}
+nav>ul>li>ul {
+    top: 100%;
+}
+
+nav ul ul ul {
+    left: 100%;
+    top: 0;
+}
+/* Fin de estilos de la barra de navegación */
+
+.navegacion {
+    margin-left: 2rem;
+    font-size: .8rem;
+    padding-top: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #555555;
+}
+
+/* Estilos de la zona de contenidos */
+section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilos para el article de nosotros */
+.nosotros{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 10%;  
+}
+
+/* Estilos para el resto de los article */
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 33%;
+    height: 30%;
+}
+
+.item img {
+    width: 50%;
+    height: 30%;
+    margin: auto;
+} 
+ 
+.item h4{
+    color: #be5813;
+    text-align: center;
+    height: 10%;
+    width:100%;
+}
+
+.item p{
+    color: #555555;
+    text-align: center;
+    width: 100%;
+    height: 30%;
+} 
+
+.item h3 {
+    text-align: center;
+    height: 10%;
+    width:100%;
+}
+
+/* Estilos para la zona de producto estrella */
+aside {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+    background-color: #fef8e4;
+    text-align: center;
+}
+
+aside h2{
+    margin-top: 20px;
+    padding: 15px;
+    width: 100%;
+}
+
+.img_aside {
+    width: 60%;
+    margin: 20px auto;
+    height: 40%;
+}
+
+.img_aside:hover {
+    width: 80%;
+    margin: 20px auto;
+    height: 50%;
+}
+
+/* Estilos del footer */
+footer {
+    background-image: url('../img/agua.jpg');
+    padding: 20px;
+    color: #212121;
+    font-size:  14px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dulces{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center
+}
+
+.titulo_section {
+    margin: 5px;
+    width: 90vw;
+    text-align: center;
+}
+
+
+.articulos_dulces{
+    width: 19vw;
+    height: 35vh;
+    text-align: center;
+    margin-right: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:space-between;
+    font-size: 1em;
+    padding: 5px;
+
+}
+
+a{
+    padding: 5px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.imagenes_productos{
+    width: 50%;
+    height: auto;
+    border: 1px solid #BE4813;
+    align-self: center;
+}
+
+.imagenes_productos:hover{
+    border-radius: 1rem;
+}
+
+
+
+.img_dulces {
+    width: 50%;
+    height: auto;
+}
+
+
+
+.encabezado_articulos {
+    font-family: 'Tomorrow', Arial, Helvetica, sans-serif;
+}
+
+/* Estilos del main de la página dulce.html */
+.dulce{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Como se reparten los tres section el ancho de la pantalla */
+.articulo{
+    width: 20vw;
+    
+}
+
+.articulo div {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.articulo img:hover {
+    border-radius: 2rem;
+}
+
+.tabla {
+    width: 40vw;
+    flex-grow: 1;
+    
+}
+
+.tabla div {
+    width: 100%;
+    text-align: center;
+    overflow-x: auto;
+}
+
+ .lista{
+    width:15vw;
+    
+}
+
+.lista div {
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilos de la zona del producto */
+
+.articulo h2 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.articulo img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #BE4813;
+}
+
+.articulo h4 {
+    padding: 5px;
+}
+
+.lista div h5{
+    background-color: #555555;
+    color: #FFF;
+    padding: 5px;
+    margin-bottom: 1rem;
+}
+.lista div ul{
+    list-style: none;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.lista div li:nth-child(odd){
+    padding: 3px;
+    background-color: #BE4813;
+}
+
+.lista div li:nth-child(even){
+    padding: 3px;
+    background-color: #FEF8E4;
+}
+
+/* Estilos de la Tabla */
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+table {
+   margin: 0 auto;
+}
+
+.center {
+    vertical-align: center;
+    text-align: center;
+}
+
+.bottom_right {
+    vertical-align: bottom;
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.bottom {
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.color_gris {
+    background-color: #D9D9D9;
+}
+
+.color_claro{
+    background-color: #D3DFED;
+}
+
+.color_pastel {
+    background-color: #D8E4BC;
+}
+
+.color_naranja {
+    background-color: #F5C18F;
+}
+
+.color_azulado {
+    background-color: #95B3D7;
+}
+
+.color_aqua {
+    background-color: #DBEEF4;
+}
+
+.color_trans {
+    background-color: #ECF1DD;
+}
+
+.color_grisaceo {
+    background-color: #DDE6F0;
+}
+
+.alergenos_si {
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+fieldset {
+    margin: 5px;
+    padding: 10px;
+}
+
+/* Estilos para el formulario de login */
+.formulario_login {
+    padding: 5px;
+}
+
+.boton_login {
+margin: 0 auto;
+}
+
+/* Estilos para el ancla */
+.ancla {
+    width: 3vw;
+    height: 4vh;
+}
+
+/* Estilos para la página privada */
+.zona_privada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zona_privada input:invalid {
+    border: solid 2px red;
+}
+
+.zona_privada input:valid {
+    border: solid 2px green;
+}
+
+.zona_privada input {
+    width: 50%;
+}
+
+.zona_privada fieldset {
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.inputs{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botones button{
+    text-decoration: none;
+    padding: 7px;
+    font-weight: 2rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #be5813;
+    border-radius: 6px;
+    border: 2px solid #3a1a14;
+}
+
+.search{
+    text-decoration: none;
+    padding: 2px;
+    font-weight: 1rem;
+    font-size: .9rem;
+    color: #ffffff;
+    background-color: #be5813;
+    border-radius: 6px;
+    border: 1px solid #3a1a14;
+}
+
+.textarea_form{
+    display: flex;
+    justify-content: center;
+}
+
+input, select, textarea, fieldset{
+    border-radius: 5px;
+    border: 1px solid #3a1a14;
+}
+
+
+@media screen and (max-width:1024px) {
+    /* Cuando la resolución de la pantalla es inferior a 1024 px los artículso con la clase max_width desaparecen, ampliamos el tamaño de la caja del resto y reducimos un poco el tamaño del título */
+
+    .max_width {
+        display: none;
+    }
+
+    .articulos_dulces{
+        width: 25vw;
+    }
+
+    .p_article {
+        font-size: .5rem;
+    }
+
+
+
+}

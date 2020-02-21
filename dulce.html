@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Panes para soñar</title>
+    <!-- Enlace a la hoja de estilos -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+</head>
+
+<body>
+    <!-- Div en el que va todo el contenido de la página -->
+    <div class="container">
+        <!-- Cabecera donde va el título, logo e idiomas -->
+        <header>
+            <div>
+                <a href="index.html"> <img class="logo" src="./img/logo.jpg" alt="logo Panes Para Soñar"/></a>
+            </div>
+            <h1>Panes para soñar</h1>
+            <div>
+                <a href="index.html"><img class="idiomas" src="./img/esp.gif" alt="español"></a>
+                <a href="index.html"><img class="idiomas" src="./img/uk.gif" alt="ingles"></a> 
+            </div>
+            <div>
+                <form role="search">
+                    <img src="img/lupa.png" alt="lupa de busqueda" width="15" height="15">
+                    <input type="search" placeholder="Buscar" id="search" aria-label="Buscar contenido en el sitio">
+                    <button class="search" type="submit">Buscar</button>
+                </form>
+            </div>
+        </header>
+
+        <!-- Barra de navegación -->
+        <nav>
+            <ul>
+                <li><a href="#">Panes</a>
+                    <ul>
+                        <li><a href="#">Normales</a>
+                            <ul>
+                                <li><a href="#">Barras</a></li>
+                                <li><a href="#">Bollos</a></li>
+                                <li><a href="#">Roscas</a></li>
+                                <li><a href="#">Hogazas</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Especiales</a>
+                            <ul>
+                                <li><a href="#">Pan de centeno</a></li>
+                                <li><a href="#">Pan de cereales</a></li>
+                                <li><a href="#">Pan integral</a></li>
+                                <li><a href="#">Pan sin gluten</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Pastelería</a>
+                    <ul>
+                        <li><a href="productos.html">Dulces</a></li>
+                        <li><a href="#">Tartas</a></li>
+                        <li><a href="#">De temporada</a>
+                            <ul>
+                                <li><a href="#">Navidad</a></li>
+                                <li><a href="#">Semana Santa</a></li>
+                                <li><a href="#">Otoño</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Bollería</a>
+                    <ul>
+                        <li><a href="#">Dulce (madalenas, bizcochos..)</a></li>
+                        <li><a href="#">Salada (empanadas, saladitos..)</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Servicios</a>
+                    <ul>
+                        <li><a href="#">Mesas de comuniones</a></li>
+                        <li><a href="#">Cumpleaños</a></li>
+                        <li><a href="#">Bodas</a></li>
+                        <li><a href="#">Tartas y complementos temáticos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <span class="navegacion"><a href="index.html"> Inicio</a>><a href="productos.html">Dulces</a>><a href="dulce.html">Tarta de Kinder</a></span>
+        <main class="dulce">
+            <section class="articulo">
+                <div>
+                    <h2>Tarta de Kinder</h2>
+                    <img src="./img/tarta_kinder.jpg" alt="Tarta de Kinder"/>
+                    <h4> Elaborada con 3 capas de bizcocho y chocolate Kinder cubierto de Kinder Bueno.</h4>
+                    <h4>30,90 €</h4>
+                    <h4>12 Porciones</h4>
+                </div>    
+            </section>
+            <section class="tabla">
+                <div>
+                    <table style="width: 80%;">
+                        
+                        <thead>
+                            <tr>
+                                <th colspan="10" class="color_gris">Información Nutricional / Porción (100g)</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th rowspan="2" class="bottom color_claro">Producto</th> 
+                                <th colspan="3" class="bottom color_pastel">Grasas(g)</th>
+                                <th colspan="2" class="bottom color_naranja">Hidratos de carbono (g)</th>
+                                <th colspan="3" class="bottom color_azulado">Otros (g)</th>
+                                <th class="color_aqua">Energía (Kcal)</th>
+                            </tr>
+                            <tr>
+                                <td class="bottom_right color_trans"><b>Saturadas</b></td>
+                                <td class="color_trans"><h6>Monoinsaturadas</h6></td>
+                                <td class="color_trans"><h6>Polinsaturadas</h6></td>
+                                <td class="color_grisaceo"><b>Azúcares</b></td>
+                                <td class="color_grisaceo"><b>Otros</b></td>
+                                <td class="color_grisaceo"><b>Proteínas</b></td>
+                                <td class="color_grisaceo"><b>Sal</b></td>
+                                <td class="color_grisaceo"><b>Otros</b></td>
+                                <td rowspan="3" class="center"><b>281</b></td>
+                            </tr>
+                            <tr>
+                                <td class="left"><b>Nombre del producto.</b></td>
+                                <td class="bottom_right">20</td>
+                                <td class="bottom_right">4,38</td>
+                                <td class="bottom_right">6,82</td>
+                                <td class="bottom_right">33,07</td>
+                                <td class="bottom_right">20,93</td>
+                                <td class="bottom_right">4,64</td>
+                                <td class="bottom_right">0,7</td>
+                                <td class="bottom_right">9,46</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="left color_gris"><b>Total</b></td>
+                                <td colspan="3" class="center color_gris"><b>31,2</b></td>
+                                <td colspan="2" class="center color_gris"><b>54</b></td>
+                                <td colspan="3" class="center color_gris"><b>4,81</b></td>
+                                
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>  
+            </section>
+            <section class="lista">
+                <div>
+                    <h5>ALÉRGENOS TARTA KINDER</h5>
+                    <ul>
+                        <li class="alergenos_si">Leche: Si</li>
+                        <li class="alergenos_si">Huevo: Si</li>
+                        <li>Gluten: No</li>
+                        <li>Frutos con cáscara: No</li>
+                        <li>Cacahuete: No</li>
+                        <li class="alergenos_si">Soja: Si</li>
+                        <li>Pescado: No</li>
+                        <li>Crustáceos: No</li>
+                        <li>Apio: No</li>
+                        <li>Mostaza: No</li>
+                    </ul>
+                </div>  
+            </section>
+
+        </main>
+
+        <!-- Pie de página-->
+        <footer>
+            <address>2019 Panes para soñar&nbsp;&nbsp;  |&nbsp;&nbsp;   C/Pandería Nº9 29000 Málaga&nbsp;&nbsp;   |&nbsp;&nbsp;   jcfmalaga@hotmail.com&nbsp;&nbsp;   |&nbsp;&nbsp;   teléfono:<em>951-25-25-25</em></address>
+                <div>
+                        <a href="index.html"><img class="idiomas" src="./img/facebook.webp" alt="Logo Facebook"></a>
+                        <a href="index.html"><img class="idiomas" src="./img/twitter.png" alt="Logo Twitter"></a>
+                        <a href="index.html"><img class="idiomas" src="./img/instagram.webp" alt="Logo instagram"></a>
+                </div>
+
+            
+        </footer>
+        
+    </div>
+</body>
+</html>
