@@ -8,6 +8,7 @@
     <title>Panes para soñar</title>
     <!-- Enlace a la hoja de estilos -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styleTarea5.css">
     <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./img/favicon.ico">
 </head>
@@ -18,9 +19,12 @@
         <!-- Cabecera donde va el título, logo e idiomas -->
         <header>
             <div>
-                <a href="index.html"> <img class="logo" src="./img/logo.jpg" alt="logo Panes Para Soñar"/></a>
+                <a href="index.html"> <img class="logo transformacion" src="./img/logo.jpg" alt="logo Panes Para Soñar"/></a>
             </div>
-            <h1>Panes para soñar</h1>
+            <div class="banner">
+                
+            </div>
+           
             <div>
                 <a href="index.html"><img class="idiomas" src="./img/esp.gif" alt="español"></a>
                 <a href="index.html"><img class="idiomas" src="./img/uk.gif" alt="ingles"></a> 
@@ -102,42 +106,42 @@
                     <h3>Barra Artesana</h3>
                     <p>Barra de corteza fina y crujiente. Con un aspecto rústico muy atractivo, por su enharinado en la superficie y sus puntas redondeadas, que recuerda al pan de siempre.</p>
                     <img src="./img/barra.png" alt="Barra Artesana">
-                    <h3>0,60 €</h3>
+                    <h3 class="animacionPrecio">0,60 €</h3>
                 </article>
 
                 <article class="item">
                     <h3>Pagès Especial</h3>
                     <p>El pan de Pagès, de tradición catalana pero a día de hoy se consume en la mayoría de hogares españoles. Ideal para rebanar y consumir en desayunos.</p>
                     <img src="./img/pags-especial.jpg" alt="Pan Especial">
-                    <h3>1,50 €</h3>
+                    <h3 class="animacionPrecio">1,50 €</h3>
                 </article>
 
                 <article class="item">
                     <h3>Bollería Salada</h3>
                     <p>Un nuevo abanico de aromas, sabores y texturas se abre con nuestro variado surtido de bollería salada. </p>
                     <img src="./img/salada.jfif" alt="Bolleria Salada">
-                    <h3>Pack 6 unidades: 3 €</h3>
+                    <h3 class="animacionPrecio">Pack 6 unidades: 3 €</h3>
                 </article>
 
                 <article class="item">
                     <h3>Napolitana Chocolate</h3>
                     <p>Deliciosa napolitana de masa suave rellena de crema de cacao con avellanas de gran calidad. </p>
                     <img src="./img/napolitana.png" alt="Napolitana Choco">
-                    <h3>1,20 €</h3>
+                    <h3 class="animacionPrecio">1,20 €</h3>
                 </article>
 
                 <article class="item">
                     <h3>Hoops de crema</h3>
                     <p>Irresistibles por su atractivo aspecto y por su delicioso sabor. Cubierto de azúcar en grano y cremoso relleno de crema pastelera. 25% de relleno. 100 g.</p>
                     <img src="./img/hoops.gif" alt="Hoops Crema">
-                    <h3>1,30 €</h3>
+                    <h3 class="animacionPrecio">1,30 €</h3>
                 </article>
 
                 <article class="item">
                     <h3>Pepito crema azucarado</h3>
                     <p>Relleno de crema pastelera distribuida por todo su interior y con cobertura de azúcar en grano. 27% de relleno. Peso 110 g. Largo 20 cm.</p>
                     <img src="./img/pepito.png" alt="Pepito azucarado">
-                    <h3>1,30 €</h3>
+                    <h3 class="animacionPrecio">1,30 €</h3>
                 </article>
                 
             </section>
@@ -165,6 +169,38 @@
                         </fieldset>
                     </form>
                 </div> 
+
+                <!-- Texto con SVG, he tenido problemas con Firefox que no he sabido resolver, funciona perfectamente
+                    en Chrome, Opera y Edge -->
+                <svg>
+
+                    <!-- Con Path definimos una forma mediante un conjunto de puntos y le especificamos el color de la forma
+                         y que no la rellene -->
+                    <path id="MyPath" fill="none" d="M5,25c0,0,46.979,22.148,88.59,28.859s93.301-18.569,125.503-19.463c48.322-1.342,71.56,20.371,97.315,20.564c44.295,0.332,71.141-23.249,97.986-24.591c34.212-1.71,57.718,22.148,70.47,22.148s36.242-19.463,52.35-20.134" stroke="#fef8e4" />
+
+                    <!-- Escribimos el texto en la posición x 500 que es fuera por la derecha y 50 en el eje y, especificamos el color
+                        fuente y tamaño-->
+                    <text x="500" y="50" font-family="Verdana" font-size="40" alignment-baseline="text-before-edge" fill="#be5813">
+                        <!-- Ahora colocamos el texto a lo largo del path que hemos crado anteriormente -->
+                        <textPath xlink:href="#MyPath">
+                            Si contrata nuestro Servicio de Comuniones durante marzo
+                        </textPath>
+                        <!-- La animación va desde el punto 500 del eje x al -1100, va a tardar 10 segundos y durará siempre -->
+                        <animate attributeName="x" values="500;-1100" dur="10s" repeatCount="indefinite" />
+                    </text>
+
+                    <!-- Aquí escribimos un texto con las siguientes características -->
+                    <g style="font: bolder 1rem arial;fill: #be5813; stroke: #3a1a14; stroke-width: 1px;">
+                        <text x=3rem y=70>Especial comuniones 30%dto</text>
+                    </g>
+
+                    <!-- Aquí escribimos un texto con las siguientes características -->
+                    <g style="font: italic 1rem verdana;fill: #be5813;">
+                        <text x=2rem y=90>Solicite más información desde</text>
+                        <text x=4rem y=110>su área de cliente</text>
+                    </g>
+                </svg>
+
                 <div>
                     <h2>Producto Estrella <br>
                         Tarta de Santiago

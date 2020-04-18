@@ -1,0 +1,80 @@
+/* Animación del logo, le ponemos un nombre 'beat' y que dure 3 segundos */
+.transformacion{
+    animation: beat 3s;
+}
+
+/* En el keyframe aplicamos la animación y le decimos que empieze en su tamaño original a la
+mitad de la animación será un 80% más pequeño y estará girado 45 grados 
+y al final de la animación volverá a tener su tamaño */
+@keyframes beat{
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: rotate(45deg) scale(0.2);
+        
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animación para resaltar los precios, de damos un border radius de 50% para ponerlo ovalado,
+y un background en blanco para que al principio no se vea, primero definimos que propiedad va a tener
+la transición, en este caso el background y el color, con duration indicamos que el background va a tardar
+2 segundos y el color 1 segundo y con delay al color le aplicamos un retraso de 1 segundo */
+.animacionPrecio{
+    border-radius: 50%;
+    background-color: white;
+    transition-property: background-color, color;
+    transition-duration: 2s, 1s;
+    transition-delay: 0s, 1s;
+}
+
+/* Color del texto y del background cuando se haga hover sobre los precios */
+.animacionPrecio:hover{
+    background-color: #caa388;
+    color: black;
+}
+
+
+/* Propiedades para el banner */
+.banner {
+    max-width: 400px;
+    max-height: 75px;
+    width: 30vw;
+    height: 11vh;
+    border-radius: 1rem;
+    /* Le damos el nombre banner a la animación, que dure 15 segundos y que no termine nunca */
+    animation: banner 15s infinite;
+    /* Con la siguiente propiedad la animación inviert su dirección al terminar */
+    animation-direction: alternate;
+}
+
+
+/* A la animación del banner le cambiamos las imágenes cada 5 segundos aproximadamente
+y le cambiamos la opacidad en las transiciones */
+@keyframes banner {
+    0%, 30%{
+        background-image: url('../img/banner1.png');
+        opacity: 1;
+    }
+    31%, 34%{
+        opacity: 0.1;
+        
+    }
+    35%, 65%{
+        background-image: url('../img/banner2.png');
+        opacity: 1;
+    }
+    66%, 69%{
+        opacity: 0.1;
+    }
+    70%, 100%{
+        opacity: 1;
+        background-image: url('../img/banner3.png');
+    }
+
+}

@@ -576,6 +576,10 @@ input, select, textarea, fieldset{
 @media screen and (max-width:1024px) {
     /* Cuando la resolución de la pantalla es inferior a 1024 px los artículso con la clase max_width desaparecen, ampliamos el tamaño de la caja del resto y reducimos un poco el tamaño del título */
 
+    body{
+        width: 100%;
+    }
+
     .max_width {
         display: none;
     }
